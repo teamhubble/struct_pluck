@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Mathieu Rhéaume"]
   spec.email         = ["mrheaume@cortexmedia.ca"]
 
-  spec.summary       = %q{TODO: Stuct pluck maps the pluck into hashes.}
-  spec.description   = %q{TODO: Stuct pluck maps the pluck into hashes.}
+  spec.summary       = "Stuct pluck maps the pluck into hashes."
+  spec.description   = "Stuct pluck maps the pluck into hashes."
   spec.homepage      = "git@git.cortex.ninja:cortex/struct_pluck.git"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
