@@ -1,0 +1,7 @@
+test:
+  adapter: postgresql
+  encoding: unicode
+  host: postgres
+  username: postgres
+  password: mysecretpassword
+  database: struct_pluck_test

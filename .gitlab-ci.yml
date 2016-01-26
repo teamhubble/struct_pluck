@@ -1,0 +1,25 @@
+image: ruby:2.3.0
+services:
+  - postgres:9.4
+
+variables:
+  PGPASSWORD: 'mysecretpassword'
+
+before_script:
+  - ruby -v
+  - which ruby
+  - apt-get update -qq
+  - apt-get install -y postgresql-client-9.4 libpq-dev build-essential
+  - gem install bundler --no-ri --no-rdoc
+  - bundle install
+
+rubocop:
+  script:
+    - bundle exec rubocop
+
+rspec:
+  script:
+    - cp spec/database.yml.gitlabci spec/database.yml
+    - psql -h postgres -U postgres -c 'create database struct_pluck_test;'
+    - psql -h postgres -U postgres -f spec/database_structure.sql struct_pluck_test
+    - bundle exec rspec
