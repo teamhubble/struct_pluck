@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Stuct pluck maps the pluck into hashes."
   spec.description   = "Stuct pluck maps the pluck into hashes."
-  spec.homepage      = "git@git.cortex.ninja:cortex/struct_pluck.git"
+  spec.homepage      = "cortex.bz"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
