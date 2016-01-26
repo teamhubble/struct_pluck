@@ -15,11 +15,8 @@ module StructPluck
       result = pluck(*column_names)
       fakerecord = Struct.new(*column_names)
       result.map do |r|
-        if r.size != column_names.size
-          fail UnsupportedDatatype
-        else
-          fakerecord.new(*r)
-        end
+        fail UnsupportedDatatype if r.size != column_names.size
+        fakerecord.new(*r)
       end
     end
   end
