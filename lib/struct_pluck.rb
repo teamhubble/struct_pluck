@@ -1,4 +1,4 @@
-require "struct_pluck/version"
+require 'struct_pluck/version'
 
 module StructPluck
   # Your code goes here...

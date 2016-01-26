@@ -1,0 +1,6 @@
+AllCops:
+  Exclude:
+    - struct_pluck.gemspec
+    - Rakefile
+Documentation:
+  Enabled: false
