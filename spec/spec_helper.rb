@@ -4,8 +4,8 @@ require 'yaml'
 require 'factory_girl'
 require 'rspec'
 
-database_config = YAML.load_file(File.expand_path("../database.yml", __FILE__))
-ActiveRecord::Base.establish_connection database_config["test"]
+database_config = YAML.load_file(File.expand_path('../database.yml', __FILE__))
+ActiveRecord::Base.establish_connection database_config['test']
 
 class TextArrayRecord < ActiveRecord::Base
 end
@@ -27,7 +27,7 @@ RSpec.configure do |config|
         begin
           example.call
         ensure
-          raise ActiveRecord::Rollback
+          fail ActiveRecord::Rollback
         end
       end
     end
