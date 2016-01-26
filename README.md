@@ -20,7 +20,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Instead of working with directly pluck you can do like so...
+
+```
+MyModel.all.struct_pluck([:name, :tax, :car])
+```
+
+From there you'll get an array of structs that you can work with like so...
+
+```
+results.each do |item|
+  puts item[:name]
+  puts item[:tax]
+  puts item[:car]
+end
+```
 
 ## Development
 
